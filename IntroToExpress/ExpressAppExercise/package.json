@@ -1,0 +1,14 @@
+{
+  "name": "expappjson",
+  "version": "1.0.0",
+  "description": "My first App with package json",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aman",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

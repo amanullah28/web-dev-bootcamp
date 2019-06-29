@@ -1,0 +1,64 @@
+<% include ../partials/header %>
+<div class="container">
+<main>
+  
+  <input id="tab1" type="radio" name="tabs" checked>
+  <label for="tab1">Your Campgrounds</label>
+    
+  <input id="tab2" type="radio" name="tabs">
+  <label for="tab2">Your Rating</label>
+    
+  <input id="tab3" type="radio" name="tabs">
+  <label for="tab3">Info</label>
+    
+    
+  <section id="content1">
+    
+  <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+    <% campgrounds.forEach(function(campgrounds){%>
+       <div class="col-md-3 col-sm-6">
+          <div class="thumbnail" >
+                <img src="<%= campgrounds.image %>">
+             <div class="caption">
+                 <h4><%= campgrounds.name %></h4>
+                     <p>
+                         <a class="btn btn-primary" href="/campgrounds/<%= campgrounds._id %>">More Info</a>
+                     </p>
+             </div>
+         </div>
+      </div>
+     
+     <% }); %>
+     
+    </div>
+
+   
+  </section>
+    
+  <section id="content2">
+    <h2>
+      Coming soon.... Stay tune...  :) <3.....
+    </h2>
+  </section>
+    
+  <section id="content3">
+    <div class="row">
+      <div class="col-md-6">
+          <h3>
+           <%=user.firstName+" "+user.lastName%>
+          </h3>
+          <h4>
+            <%=user.email%>
+          </h4>
+        </div>
+          <div class="col-md-6">
+            <img id="info-show-pro-img" src="<%=user.profileImage%>">
+          </div>
+          </div>
+  </section>
+
+    
+</main>
+<!--//===================================================//-->
+</div class="container">
+<% include ../partials/footer %>

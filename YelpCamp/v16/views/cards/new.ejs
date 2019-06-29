@@ -1,0 +1,39 @@
+<% include ../partials/header %>
+<div class="row justify-content-center">
+    <div class="col-md-12 text-center">
+         <h1>Create a new visiting card</h1>    
+    </div>
+        <div class="col-lg-4 col-md-6 col-xs-12 mt-2">
+            <form action="/cards" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="CampGround Name" name="name">
+                </div>
+                 <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Category" name="category">
+                </div>
+                 <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Sub Category" name="subcategory">
+                </div>
+                
+                
+                <div class="form-group">
+                    <input class="form-control" type="number" placeholder="price" name="price" min="0.01" step="0.01">
+                </div>
+                
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Image Url" name="image">
+                </div>
+                
+                <div class="form-group">
+                    <textarea rows="4" cols="70" class="form-control" placeholder="post description" name="description"></textarea> 
+                </div>
+                  
+                <div class="form-group">
+                     <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+        </form>
+               <a href="/cards">Go BAck!!</a>
+        </div>
+    </div>
+        
+        <% include ../partials/footer %>

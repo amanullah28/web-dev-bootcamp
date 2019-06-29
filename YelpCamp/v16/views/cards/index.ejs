@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+
+      <p id="add-new">
+        <a class="btn btn-primary btn-large" href="/cards/new">Add New Card</a>
+      </p>
+<div class="row text-center mb-4" id="card-grid">     
+        <% cards.forEach(function(cards){%>
+     <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+         <div class="card" style="">
+             <img class="card-img-top" src="<%= cards.image %>" alt="<%= cards.name %>" style="height: 10rem;">
+                 <div class="card-body">
+                      <h5 class="card-title"><%= cards.name %></h5>
+                       <a href="/cards/<%= cards._id %>" class="btn btn-primary">More Info</a>
+            </div>
+        </div>
+     </div>
+   <% }); %>
+</div>    
+
+
+
+<% include ../partials/footer %>

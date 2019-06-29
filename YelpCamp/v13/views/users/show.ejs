@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+<h2>This is profile page</h2>
+<div class="row">
+    <div class=col-md-4>
+      <h1><%=user.firstName+" "+user.lastName%></h1>
+          <div class="thumbnail">
+             <img src="<%= user.profileImage %>" alt="user Profile image">
+        </div>
+        <div>
+            Lorem Ipsum is simply dummy text
+            of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dumm
+            y text ever since the 1500s, when an unknow
+            n printer took a galley of type and scrambled it to m
+            ake a type specimen book. It has survived not only
+            five centuries, but also the leap into electronic typeset
+        </div>
+    </div>
+<div class="col-md-8">
+              <h3><%= user.username %>'s Campgrounds</h3>
+            <ul>
+                <% campground.forEach(function(campground){ %>
+               <li> 
+                   <a href="/campgrounds/<%=campground.id%>"><%= campground.name %></a>
+            </li> 
+            </ul>
+        <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer %>

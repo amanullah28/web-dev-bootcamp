@@ -1,0 +1,9 @@
+<h1>Result Page</h1>
+<%if(data["Search"]){%>
+<% data["Search"].forEach(function(movie){ %>
+<li><%= movie['Title'] %></li>
+<% }); %>
+<%} else{%>
+<hr>
+ <h3>No movie found</h3>
+ <%}%>
